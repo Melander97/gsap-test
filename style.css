@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-animation-container {
+  background-color: #09344d;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-animation {
+  color: #edddcb;
+  font-size: 72px;
+  white-space: nowrap;
+  display: inline-block;
+  display: inline-block;
+  animation: moveText 20s linear infinite;
+}
+
+.text-animation.reverse {
+  animation: reverseMoveText 20s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes reverseMoveText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.separator {
+  color: #da774b;
+}
+
+@media only screen and (max-width: 640px) {
+  .text-animation {
+    font-size: 33px;
+  }
+}
